@@ -15,16 +15,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 public class SejourController implements Initializable {
 	
@@ -33,6 +28,9 @@ public class SejourController implements Initializable {
 
 	    @FXML
 	    private Button RechercherBtn;
+
+	    @FXML
+	    private Button GenerateBtn;
 	    
 	    @FXML
 	    private TableView<Sejour> table;
@@ -57,6 +55,7 @@ public class SejourController implements Initializable {
 	    
 	    @FXML
 	    void ActionAfficherSejour(ActionEvent event) {
+	    	long start = System.currentTimeMillis();
 	    	
 		    ObservableList<Sejour> data = FXCollections.observableArrayList() ;
 
@@ -87,11 +86,47 @@ public class SejourController implements Initializable {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+	    	long end = System.currentTimeMillis();
+	    	// Calculate execution time (around 700ms for 10.000 entries)
+	    	System.out.println("Temps d'affichage : " + (end-start) + "ms");
 	    }
 
 	    @FXML
 	    void ActionRechercherBtn(ActionEvent event) {
 	    	System.out.println("Vous avez cliqué sur le bouton Rechercher ");
+	    }
+
+	    @FXML
+	    void ActionGenerateBtn(ActionEvent event) {
+	    	try {
+	    		// Create connexion to db
+				Connection conn = dbConnexion.Connect();
+				String sql = "INSERT INTO Sejours (Hote, NbrPersonnes, NbrJours, Restauration, Competences, Dates) values (?, ?, ?, ?, ?, ?)" ;
+				
+				// create the mysql insert preparedstatement
+			      PreparedStatement preparedStmt = conn.prepareStatement(sql);
+			      
+			      preparedStmt.setInt(2, 1);
+			      preparedStmt.setInt(3, 2);
+			      preparedStmt.setString(4, "matin - soir");
+			      preparedStmt.setString(5, "Cuisine");
+			      preparedStmt.setString(6, "01/02/2022 - 03/02/2022");
+			      
+				//Executer la requête SQL 10.000 fois
+			    for(int i = 0; i < 10000; i++)
+			    {
+			    	preparedStmt.setString (1, "Michel" + (i+1));
+			    	preparedStmt.execute();
+			    	System.out.println("Vous avez ajouté " + (i+1) + " entrée à la BDD");
+			    	
+			    }
+		    	
+				//Fermer la connexion 
+				conn.close(); 
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
 	    }
 
 		@Override
