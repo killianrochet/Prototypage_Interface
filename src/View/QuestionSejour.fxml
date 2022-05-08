@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.QuestionSejour">
+   <children>
+      <BorderPane prefHeight="62.0" prefWidth="1000.0" style="-fx-background-color: grey;">
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adeona" wrappingWidth="102.26220703125" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <TextArea layoutY="62.0" prefHeight="541.0" prefWidth="161.0" style="-fx-background-color: pink;" text="Messages reçu : " />
+      <Text layoutX="366.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Séjour :  1454556 " />
+      <Text layoutX="366.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre message : " />
+      <Button layoutX="489.0" layoutY="492.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Envoyer" />
+      <TextField layoutX="477.0" layoutY="248.0" prefHeight="103.0" prefWidth="277.0" style="-fx-background-color: pink;" />
+      <Text layoutX="410.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Envoyer un message">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
