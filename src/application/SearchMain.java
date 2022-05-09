@@ -18,6 +18,7 @@ public class SearchMain extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
+
     /**
      * @param args the command line arguments
      */
