@@ -37,6 +37,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+
+
 public class SejourController implements Initializable {
 	
 	 	@FXML
@@ -86,16 +88,12 @@ public class SejourController implements Initializable {
 	    private Button EmailResearchBtn;
 	    @FXML
 	    private Button HoteResearchBtn;
+	    
+
+
 
 	    
 	   
-	    
-	    
-	  
-
-      
-	    
-	    
 	    @FXML
 	    void ActionAfficherSejour(ActionEvent event) {
 	    	
@@ -196,7 +194,7 @@ public class SejourController implements Initializable {
 	         trackingDetailsHolder.setHgap(5);
 	         ImageView driverPicture = photoColumn;
 	         driverPicture.setPreserveRatio(true);
-	         driverPicture.setFitHeight(80d);
+	         driverPicture.setFitHeight(100d);
 	         GridPane.setRowSpan(driverPicture, 2);
 	         trackingDetailsHolder.getChildren().add(driverPicture);
 
@@ -279,7 +277,41 @@ public class SejourController implements Initializable {
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
-			
-		}
+			/*
+	            try {
+	                // Create connexion to db
+	                Connection conn = dbConnexion.Connect();
+	                String sql = "INSERT INTO Sejours (Hote, NbrPersonnes, NbrJours, Restauration, Competances, Dates) values (?, ?, ?, ?, ?, ?)" ;
+	                
+	                // create the mysql insert preparedstatement
+	                  PreparedStatement preparedStmt = conn.prepareStatement(sql);
+	                  
+	                  preparedStmt.setInt(2, 1);
+	                  preparedStmt.setInt(3, 2);
+	                  preparedStmt.setString(4, "matin-soir");
+	                  preparedStmt.setString(5, "Cuisine");
+	                  preparedStmt.setString(6, "01/02/2022-03/02/2022");
+	                  
+	                //Executer la requête SQL 10.000 fois
+	                for(int i = 0; i < 10000; i++)
+	                {
+	                    preparedStmt.setString (1, "Michel" + (i+1));
+	                    preparedStmt.execute();
+	                    System.out.println("Vous avez ajouté " + (i+1) + " entrée à la BDD");
+	                    
+	                }
+	                
+	                //Fermer la connexion 
+	                conn.close(); 
+	            } catch (Exception e) {
+	                // TODO: handle exception
+	                e.printStackTrace();
+	            }
+	            */
+	            
+	        }
+	        
+
+		
 
 }

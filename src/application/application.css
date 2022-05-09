@@ -16,6 +16,7 @@
 	 -fx-background-radius: 30;
 }
 
+
 .text-input{
 
 	 -fx-background-color:rgba(0,0,0,0);
@@ -34,8 +35,13 @@
 }
 
 .table-column {
-  -fx-alignment: CENTER;
-  -fx-border-width:0 3 0 0;
+   -fx-background-color: transparent;
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+    -fx-table-cell-border-color: black, transparent;
+    -fx-border-width:15 0 15 0;
+    -fx-border-color: white;
+    -fx-border-insets: 0, 0, 0, 0;
+    
 }
 
 .noheader .column-header-background{
