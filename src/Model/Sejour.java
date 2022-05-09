@@ -16,15 +16,15 @@ public class Sejour {
 	public Sejour() {
 		super();
 	}
+	
 	public Sejour(String Hote, int NbrPersonnesRecherchees, int NbrJours, String Restauration, String Competences, String Dates)
 	{
 		this.HoteColumn = new SimpleStringProperty(Hote) ;
 		this.NbrPersonnesRechercheesColumn = new SimpleIntegerProperty(NbrPersonnesRecherchees)  ;
 		this.NbrJoursColumn = new SimpleIntegerProperty(NbrJours);
 		this.RestaurationColumn =  new SimpleStringProperty(Restauration);  
-		this.CompetencesColumn = new SimpleStringProperty(Competences) ;
-		this.DatesColumn = new SimpleStringProperty(Dates) ;
-		
+		this.CompetencesColumn = new SimpleStringProperty(Competences);
+		this.DatesColumn = new SimpleStringProperty(Dates);
 	}
 	 
 	public final StringProperty HoteColumnProperty() {
