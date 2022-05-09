@@ -31,7 +31,7 @@ import javafx.beans.binding.Bindings;
 
 import java.util.*;
 
-public class SejourController implements Initializable {
+public class SejourDiscoController implements Initializable {
 	
 	 	@FXML
 	    private Button AfficherSejourbtn;

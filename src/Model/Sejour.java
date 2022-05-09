@@ -28,7 +28,7 @@ public class Sejour {
 	}
 	 
 	public final StringProperty HoteColumnProperty() {
-		return this.HoteColumn ;
+		return this.HoteColumn;
 	}
 	
 	public final IntegerProperty NbrPersonnesRechercheesColumnProperty() {
