@@ -9,8 +9,9 @@
 .table-column {
     -fx-background-color: transparent;
     -fx-control-inner-background-alt: -fx-control-inner-background ;
-    -fx-table-cell-border-color: transparent, transparent;
+    -fx-table-cell-border-color: black, transparent;
+    -fx-border-width:25 0 25 0;
     -fx-border-color: transparent;
-	-fx-border-insets: 0, 0, 30, 0;
+	-fx-border-insets: 0, 0, 0, 0;
 	-fx-cell-size: 50px;
 }
