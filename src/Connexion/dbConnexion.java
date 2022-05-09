@@ -11,17 +11,12 @@ public class dbConnexion {
 		try {
 			String url = "jdbc:mysql://localhost:3306/Sejours";
 			
-			String user ="root";
-			String password ="123456789";
+			String user ="phpmyadmin";
+			String password ="Edissyum1998";
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(url, user, password);
 			
-			// display status message
-		      if (conn == null) {
-		         System.out.println("Connexion à la BDD non réussie");
-		      } else
-		         System.out.println("Connexion à la BDD réussie.\n");			
 			return conn ;
 		} catch (ClassNotFoundException | SQLException  e) {
 			// TODO: handle exception

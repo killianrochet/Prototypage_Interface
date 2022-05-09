@@ -1,0 +1,46 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.primary-color{
+
+	 -fx-background-color: #13123A;
+}
+
+.secondary-color{
+
+	 -fx-background-color: #000020;
+}
+
+.button{
+
+	 -fx-background-color: #242551;
+	 -fx-background-radius: 30;
+}
+
+.text-input{
+
+	 -fx-background-color:rgba(0,0,0,0);
+	 -fx-border-width:0 0 1 0;
+	 -fx-border-color: #242551;
+	 -fx-text-inner-color: #fff;
+}
+
+.selected-border{
+	-fx-border-color:#fff;
+	-fx-border-width:0 3 0 0;
+}
+
+.selected:hover{
+	-fx-background-color:#3C3D5B;
+}
+
+.table-column {
+  -fx-alignment: CENTER;
+  -fx-border-width:0 3 0 0;
+}
+
+.noheader .column-header-background{
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-alignment: CENTER;
+}

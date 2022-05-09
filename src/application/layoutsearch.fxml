@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerSearchList">
+    <children>
+      <TableView fx:id="tableview" layoutX="19.0" layoutY="137.0" prefHeight="400.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="90.0" text="ID" />
+          <TableColumn fx:id="Name" prefWidth="200.0" text=" Name" />
+          <TableColumn fx:id="Email" prefWidth="200.0" text=" Email" />
+          <TableColumn fx:id="service" prefWidth="200.0" text="Service" />
+          <TableColumn fx:id="other" prefWidth="90.0" text="Other" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="150.0" layoutY="91.0" prefHeight="25.0" prefWidth="350.0"  />
+      <Label layoutX="22.0" layoutY="91.0" text="Recherche">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
