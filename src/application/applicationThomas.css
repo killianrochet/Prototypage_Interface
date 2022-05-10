@@ -1,0 +1,17 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.noheader .column-header-background{
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-column {
+    -fx-background-color: transparent;
+    -fx-control-inner-background-alt: -fx-control-inner-background ;
+    -fx-table-cell-border-color: black, transparent;
+    -fx-border-width:25 0 25 0;
+    -fx-border-color: transparent;
+	-fx-border-insets: 0, 0, 0, 0;
+	-fx-cell-size: 50px;
+}
