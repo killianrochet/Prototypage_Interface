@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 
 import java.net.URL;
@@ -14,9 +15,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
-
-
 public class ControllerSearchList implements Initializable {
+	
+	 public List<String> list = new ArrayList<>();
 
     ArrayList<String> strings = new ArrayList<>(
             Arrays.asList("salut", "hello","holla", "bonjour", "il fait beau aujourdhuit",
@@ -32,21 +33,27 @@ public class ControllerSearchList implements Initializable {
     @FXML
     void search(ActionEvent event) {
         listView.getItems().clear();
-        listView.getItems().addAll(searchList(searchBar.getText(),strings));
+    	Task task = new Task<Void>()  {
+    		 @Override public Void call() throws Exception{
+    			 Platform.runLater(() ->  {
+    			 searchList(searchBar.getText(), strings);
+    			 
+    			 });
+    			 return null;
+    	 }
+  	   
+    	};
+    	new Thread(task).start();
     }
-    
-    public List<String> list = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         listView.getItems().addAll(strings);
     }
 
-    private List<String> searchList(String searchStrings, List<String> listOfStrings) {
+    private void searchList(String searchStrings, List<String> listOfStrings) {
     	
-    	Task task = new Task<Void>() {
-    		
-    	   	 @Override public Void call() {
+ 
     	   	 List<String> searchWordsArray = Arrays.asList(searchStrings.trim().split(" "));
     	   	 
     	     if(searchWordsArray.toString().length()>5) {
@@ -57,21 +64,14 @@ public class ControllerSearchList implements Initializable {
     	    	 		}).collect(Collectors.toList());
     	    	 		System.out.println("je suis ici");
     	    	 		if( list.isEmpty()) 
-    	    	 			list = listOfStrings;
-    	    	 			return null;
-    	     }
-    	     
+    	    	 			listView.getItems().addAll(listOfStrings);
+    	    	 		else
+    	    	 			listView.getItems().addAll(list);
+    	     } 	     
     	     else{ 	    	 	
-    	    	 	list = listOfStrings;
+    	    	 	listView.getItems().addAll(list);
     	    	 	System.out.println("je suis là");
-    	    	 	return null;
     	     }
-    	   	 }
-    	   	 
-    	   	};
-    	   	
-    	   new Thread(task).start();
-		   return list;
     
     }
     
