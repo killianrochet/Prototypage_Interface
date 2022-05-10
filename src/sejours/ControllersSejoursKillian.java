@@ -26,7 +26,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
-public class ControllersSejours implements Initializable {
+public class ControllersSejoursKillian implements Initializable {
 
     @FXML
     private Text personne;
@@ -61,7 +61,7 @@ public class ControllersSejours implements Initializable {
 
     int show = 0;
     List<String> myList = new ArrayList<String>();
-    Sejours a = new Sejours(myList);
+    SejoursKillian a = new SejoursKillian(myList);
     Random r = new Random();
 
     @FXML
