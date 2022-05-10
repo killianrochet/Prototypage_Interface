@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.QuestionSejour">
+   <children>
+      <BorderPane prefHeight="62.0" prefWidth="1000.0" style="-fx-background-color: grey;">
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adeona" wrappingWidth="102.26220703125" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </center>
+      </BorderPane>
+      <TextArea layoutY="62.0" prefHeight="541.0" prefWidth="161.0" style="-fx-background-color: pink;" text="Mes messages : " />
+      <Text layoutX="1.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jean123 : Bonjour...">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="1.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Martine757 : Salut je..." >
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Button layoutX="489.0" layoutY="492.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Envoyer"  />
+      <TextField layoutX="478.0" layoutY="333.0" prefHeight="103.0" prefWidth="277.0" style="-fx-background-color: pink;" />
+      <Text layoutX="410.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Envoyer un message">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="324.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votre message : " />
+      <Text layoutX="324.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Séjour concernée : 13864783" />
+      <Text layoutX="324.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hote : DUPONT" />
+   </children>
+</AnchorPane>
